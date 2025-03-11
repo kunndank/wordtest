@@ -1,0 +1,16 @@
+<h3>Get unique Four-Letter Sequences from uploaded Dictionary file</h3>
+
+<table class="table table-hover">
+  <tbody>
+    <tr>
+      <%= form_tag upload_and_execute_dict_words_path, multipart: true, class: "ui form" do %>
+        <%= file_field_tag :file, class: "ui button green" %>
+        <%= submit_tag "Upload", class: 'btn btn-primary' %>
+      <% end %>
+    </tr>
+    <tr>
+      <td><%= link_to 'Get Sequences', download_sequence_file_words_path, class: "ui button", method: :get %></td>
+      <td><%= link_to 'Get Words', download_word_file_words_path, class: "ui button", method: :get %></td>
+    </tr>
+  </tbody>
+</table>
